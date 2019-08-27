@@ -1,4 +1,23 @@
 {
   "name": "md-links",
-  "version": "0.1.0"
+  "version": "0.1.0",
+  "description": "md-links",
+  "main": "index.js",
+  "directories": {
+    "test": "jtest"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trini-d/SCL010-md-links.git"
+  },
+  "keywords": [],
+  "author": "Trinidad Dominguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Trini-d/SCL010-md-links/issues"
+  },
+  "homepage": "https://github.com/Trini-d/SCL010-md-links#readme"
 }
