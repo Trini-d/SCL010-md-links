@@ -2,10 +2,37 @@ let path = require('path');
 let fs = require('fs');
 
 let userPath = process.argv[2];
+
 // print process.argv
 process.argv.forEach((val, index) => {
     console.log(`${index}: ${val}`);
   });
+
+  
+const isMd = (route) => {
+    const extension = path.extname(route);
+    if(extension === '.md'){
+        console.log("esto es una archivo md:", route);
+        console.log(extractURLS(route));
+        return true;
+    }else{
+        // console.log("esto no es una archivo md:", route);
+        return false;
+    }    
+}
+
+
+fs.readdir(userPath, function(err, files) {
+    if(!err){
+        console.log(files);
+        files.forEach(function(file) {
+            isMd(file);
+        });
+    } else {
+        console.log(err);
+    }
+
+});
 
 //funcion que convierte en absoluta una ruta.
 const absolutePath = (route) => {
@@ -20,16 +47,6 @@ const absolutePath = (route) => {
 
 userPath = absolutePath(userPath);
 
-const isMd = (route) => {
-    const extension = path.extname(route);
-    if(extension === '.md'){
-        console.log("esto es una archivo md:", route);
-        return true;
-    }else{
-        return false;
-    }    
-}
-
 //abrir un archivo y extraer las URL 
 const extractURLS = (route) => {
     var datos = fs.readFileSync(route).toString(); 
@@ -39,18 +56,18 @@ const extractURLS = (route) => {
 
     };   
 
-if(isMd(userPath) === true){
-    console.log("es true");
-    console.log(extractURLS(userPath));
-} else {
-    console.log("es false");
-}                                            
+// if(isMd(userPath) === true){
+//     console.log("es true");
+//     console.log(extractURLS(userPath));
+// } else {
+//     console.log("es false");
+// }                                            
 
 
 
 
-module.exports = {
-    absolutePath,
-    isMd,
-    extractURLS
-}
+// module.exports = {
+//     absolutePath,
+//     isMd,
+//     extractURLS
+// }
