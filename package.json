@@ -6,6 +6,13 @@
   "directories": {
     "test": "jtest"
   },
+  "bin": {
+    "trini-md-links": "bin/md-links",
+    "md-links": "bin/md-links"
+  },
+  "publishConfig":{
+    "access": "public"
+  },
   "scripts": {
     "test": "jest"
   },
@@ -19,5 +26,10 @@
   "bugs": {
     "url": "https://github.com/Trini-d/SCL010-md-links/issues"
   },
-  "homepage": "https://github.com/Trini-d/SCL010-md-links#readme"
+  "homepage": "https://github.com/Trini-d/SCL010-md-links#readme",
+  "dependencies": {
+    "markdown-link-extractor": "^1.2.1",
+    "marked": "^0.7.0",
+    "node-fetch": "^2.6.0"
+  }
 }
