@@ -10,7 +10,7 @@
     "trini-md-links": "bin/md-links",
     "md-links": "bin/md-links"
   },
-  "publishConfig":{
+  "publishConfig": {
     "access": "public"
   },
   "scripts": {
