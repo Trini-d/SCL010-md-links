@@ -1,12 +1,14 @@
 const path = require('path');
-const mdLinks = require('mdLinks.js');
+const mdLinks = require('./md-links.js');
 
+// export const start = (args) => {
 let userPath = process.argv[2];
 
 let options = {
     stats: false,
     validate: false
 }
+
 
 
 // print process.argv
@@ -20,8 +22,27 @@ process.argv.forEach((val, index) => {
     }
 });
 
-mdLinks.mdLinks(userPath, options)//aqui llamamos nuestra funcion-promesa mdLinks que está en otro archivo
-    .then(console.log);
+
+// if(option)
+
+mdLinks.mdLinks(userPath, options)
+    .then(res => {
+        console.log(res);
+    })
+//}
+    // .then(res =>{
+    //     if(options.stats&&options.validate){
+    //         mdLinks(res)
+    //             //   .then(res=>{
+    //             //        console.log(("Links totales: ").green,(`${res.total}`).magenta,("\nLinks unicos: ").yellow, (`${res.unique}`).magenta, ("\nLinks rotos: ").red, (`${res.broken}`).magenta)
+    //             //   })
+    //    }
+    // })
+// mdLinks.mdLinks(userPath, options)//aqui llamamos nuestra funcion-promesa mdLinks que está en otro archivo
+//     .then(res=>{
+//          if(options.stats&&options.validate){
+//               statsLinks(res)
+//               .then
 
 
 

@@ -1,5 +1,5 @@
 {
-  "name": "md-links",
+  "name": "trini-d-md-links",
   "version": "0.1.0",
   "description": "md-links",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "jtest"
   },
   "bin": {
-    "trini-md-links": "bin/md-links",
+    "trini-d-md-links": "bin/md-links",
     "md-links": "bin/md-links"
   },
   "publishConfig": {
@@ -28,8 +28,13 @@
   },
   "homepage": "https://github.com/Trini-d/SCL010-md-links#readme",
   "dependencies": {
+    "eslint": "^6.3.0",
+    "eslint-plugin-jest": "^22.17.0",
+    "esm": "^3.2.25",
+    "jest": "^24.9.0",
     "markdown-link-extractor": "^1.2.1",
     "marked": "^0.7.0",
-    "node-fetch": "^2.6.0"
+    "node-fetch": "^2.6.0",
+    "trini-md-links": "^0.1.0"
   }
 }
